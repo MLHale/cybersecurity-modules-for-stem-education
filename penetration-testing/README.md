@@ -493,20 +493,18 @@ Earlier, in Step 7 we saw that sending a string in the `timestamp` field generat
 
 The problem here is not just that the field is mishandled, but that the error gives **FULL DETAILS ABOUT THE SERVER CONFIG**. As you can imagine listing out all the server details is bad practice.
 
-Accidentally revealing server information is a big problem. While this info is really helpful during development, it can expose the server if users see it in production. You can turn off debug information by setting a `DEBUG = False` in the `/django_backend/settings.py` file.
-
-We will return to this in the next lesson.
+Accidentally revealing server information is a big problem. While this info is really helpful during development, it can expose the server if users see it in production. You can turn generally turn of debug information on web app servers with a simple configuration setting.
 
 ### Step 10: Risk Assessment - Summarizing your test results
-For now, lets summarize the `test results` that we have collected to identify what our risks look like. Usually, risks are collected and then ranked according to `severity` (or `impact`) and `likelihood` (i.e. how probable an attack is to occur). In organizations or systems with many risks, preventing all of them isn't always feasible. `Risk prioritization` can help you decide which threats to focus on first and which vulnerabilities need to be mitigated most.
+Usually, risks are collected and then ranked according to `severity` (or `impact`) and `likelihood` (i.e. how probable an attack is to occur). In organizations or systems with many risks, preventing all of them isn't always feasible. `Risk prioritization` can help you decide which threats to focus on first and which vulnerabilities need to be mitigated most.
 
 ![request](./img/risk-priority-table.jpg)
 
-Based on the risks you've identified, score them and rank them based what you think the `likelihood` and `impact` of exploitation might be. While our list is small (and we can mitigate all of the problems) - this tool is useful when you have limited time, money, and other resources.
+We will end here.
 
 ### Additional Resources
 For more information, investigate the following.
-
+* [Nebraska Gencyer](https://mlhale.github.io/nebraska-gencyber/) - More lessons about the internet of things and security.
 * [http://developers.littlebitscloud.cc/](http://developers.littlebitscloud.cc/) - API reference for the Littlebits web service.
 * [Bruegge and Dutoit, _Object-oriented Software Engineering: Using UML, Patterns, and Java_, Prentice Hall, 2010](http://dl.acm.org/citation.cfm?id=1795808)
 
