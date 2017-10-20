@@ -427,14 +427,18 @@ What happened? Oops, we caused the server to generate a 500 error. This happened
 * lets change the `timestamp` back and try to send a `cross-site scripting attack` using the event field.
 
 ![request](./img/activate-accepts-arbitrary-input1.png)
-![request](./img/activate-accepts-arbitrary-input2.png)
 
+* You can copy the text to insert list below.
 ```json
 {
        "eventtype": "<script type='text/javascript'>alert('Cookie'+document.cookie)</script>",
        "timestamp": 1500681745
 }
 ```
+
+![request](./img/activate-accepts-arbitrary-input2.png)
+
+
 
 * It worked! We can send any string text to our app.
 * The good news is that `Django` automatically `escapes` the string before storing it in the database.
